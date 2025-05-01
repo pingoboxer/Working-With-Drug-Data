@@ -103,11 +103,11 @@ console.log(drugsRequiringNoPrescription);
 
 
 // A function that takes a manufacturer name and returns how many drugs are from that company
-const findDrugByManufacturer = (manufacturer) => {
-    return drugs.filter((drug) => drug.manufacturer.toLocaleLowerCase() === manufacturer.toLocaleLowerCase());
+const manufacturerDrugCount = (manufacturer) => {
+    return drugs.filter((drug) => drug.manufacturer.toLocaleLowerCase() === manufacturer.toLocaleLowerCase()).length;
 };
 // Test
-console.log(findDrugByManufacturer("Pfizer"));
+console.log(manufacturerDrugCount("Pfizer"));
 
 
 // Using forEach() to count how many drugs are Analgesics.
