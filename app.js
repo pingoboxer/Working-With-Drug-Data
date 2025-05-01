@@ -112,10 +112,7 @@ console.log(manufacturerDrugCount("Pfizer"));
 
 // Using forEach() to count how many drugs are Analgesics.
 let analgesicCount = 0;
-drugs.forEach((drug) => {
-    if (drug.category === "Analgesic") {
-        analgesicCount++;
-    }
-});
+drugs.forEach((drug) => drug.category === "Analgesic" ? analgesicCount++ : null);
+
 // Test
 console.log("Number of Analgesics: " + analgesicCount);
